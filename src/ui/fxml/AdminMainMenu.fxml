@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="vbox"
+      fx:controller="logic.AdminMainMenuController">
+
+
+    <stylesheets>
+        <URL value="@../css/AdminFunctions.css"/>
+    </stylesheets>
+
+    <fx:include source="MenuBar.fxml"/>
+
+
+    <GridPane alignment="center" hgap="25" vgap="25" VBox.vgrow="ALWAYS">
+
+        <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER">
+            <Button text="View Users" onAction="#handleUsersButton"/>
+        </VBox>
+
+        <Button id="bigButton" text="Add Users" onAction="#handleAddUserButton"
+                GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Button id="bigButton" text="Remove User" onAction="#handleRemoveUserButton"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button id="bigButton" text="Reset Password" onAction="#handleResetPasswordButton"
+                GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+
+        <VBox GridPane.columnIndex="1" GridPane.rowIndex="2" alignment="CENTER">
+            <Button fx:id="backButton" text="Back" onAction="#handleBackButton"/>
+        </VBox>
+
+    </GridPane>
+
+
+</VBox>
+
+
+
+
+

@@ -1,0 +1,48 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="logic.WelcomeController" alignment="center" hgap="10" vgap="15">
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <stylesheets>
+        <URL value="@../css/Welcome.css"/>
+    </stylesheets>
+
+    <VBox spacing="25" alignment="center"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2">
+        <Label id="company" text="Carringtons Computer Component Parts"/>
+        <Label id="title" text="Welcome"/>
+    </VBox>
+
+
+    <HBox spacing="10" alignment="CENTER_RIGHT"
+          GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label text="Employee Number:" textAlignment="RIGHT"
+        />
+    </HBox>
+    <TextField fx:id="usernameField" onAction="#handleLogInButton"
+               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT"
+          GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Label text="Password:" textAlignment="RIGHT"
+        />
+    </HBox>
+    <PasswordField fx:id="passwordField" onAction="#handleLogInButton"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <HBox id="buttons" spacing="20" alignment="center"
+          GridPane.columnIndex="0" GridPane.rowIndex="3"
+          GridPane.columnSpan="2">
+        <Button text="Log In"
+                onAction="#handleLogInButton"/>
+        <Button text="Cancel" fx:id="cancelButton"
+                onAction="#handleCancelButton"/>
+    </HBox>
+
+</GridPane>

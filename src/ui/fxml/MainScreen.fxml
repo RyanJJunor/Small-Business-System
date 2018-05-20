@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="logic.MainMenuController">
+
+
+    <stylesheets>
+        <URL value="@../css/MainStylesheet.css"/>
+    </stylesheets>
+
+    <fx:include source="MenuBar.fxml"/>
+
+
+    <GridPane alignment="center" hgap="25" vgap="25" VBox.vgrow="ALWAYS">
+
+        <Button text="Make a Sale" styleClass="bigButton"
+                onAction="#handleMakeSaleButton" GridPane.columnIndex="0"
+                GridPane.rowIndex="0"/>
+
+        <Button text="Adjust Stock" styleClass="bigButton"
+                onAction="#handleAdjustStockButton" GridPane.columnIndex="2"
+                GridPane.rowIndex="0"/>
+
+        <Button fx:id="adminButton" text="Admin Funtions"
+                onAction="#handleAdminButton" id="adminButton"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+
+        <Button text="Produce an Invoice" styleClass="bigButton"
+                onAction="#handleProduceInvoiceButton" GridPane.columnIndex="0"
+                GridPane.rowIndex="2"/>
+
+
+        <Button text="Create a Report" styleClass="bigButton"
+                onAction="#handleReportButton" GridPane.columnIndex="2"
+                GridPane.rowIndex="2"/>
+
+    </GridPane>
+
+</VBox>
+
+
+
+
+

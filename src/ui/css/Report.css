@@ -1,0 +1,51 @@
+.label {
+    -fx-font-size: 18px;
+}
+
+#title {
+    -fx-font-size: 30px;
+    -fx-padding: 50px 0px -50px 0px;
+}
+
+.date-picker {
+    -fx-pref-width: 230px;
+    -fx-pref-height: 40px;
+}
+
+.date-picker .button {
+    -fx-pref-width: 10px;
+}
+
+#buttons {
+    -fx-padding: 0px 0px 0px 0px;
+    -fx-font-size: 18px;
+    -fx-min-height: 50px;
+    -fx-min-width: 125px;
+}
+
+.table-view .label {
+    -fx-font-size: 20px;
+    -fx-font-weight: BOLD;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell {
+    -fx-font-size: 20px;
+}
+
+#summary {
+    -fx-max-height: 38px;
+
+}
+
+#summary .table-row-cell {
+    -fx-font-size: 16;
+}
+
+#summary .column-header-background {
+
+    visibility: hidden;
+    -fx-padding: -1.2em;
+
+}
+

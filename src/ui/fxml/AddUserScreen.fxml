@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="vbox"
+      fx:controller="logic.AddUserScreenController">
+
+
+    <stylesheets>
+        <URL value="@../css/AdminFunctions.css"/>
+    </stylesheets>
+
+
+    <fx:include source="MenuBar.fxml"/>
+
+
+    <GridPane alignment="CENTER" hgap="25" vgap="25" VBox.vgrow="ALWAYS">
+
+
+        <HBox spacing="10" alignment="CENTER_RIGHT"
+              GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label text="Please enter the user's first name: " textAlignment="RIGHT"/>
+        </HBox>
+
+        <TextField fx:id="firstNameField" onAction="#handleSubmitButton"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT"
+              GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <Label text="Please enter the user's last name: " textAlignment="RIGHT"/>
+        </HBox>
+
+        <TextField fx:id="lastNameField" onAction="#handleSubmitButton"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT"
+              GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <Label text="Please enter the user's employee number: " textAlignment="RIGHT"/>
+        </HBox>
+
+        <TextField fx:id="employeeNumberField" onAction="#handleSubmitButton"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT"
+              GridPane.columnIndex="0" GridPane.rowIndex="3">
+            <Label text="Is the user an admin (Y/N): " textAlignment="RIGHT"/>
+        </HBox>
+
+        <TextField fx:id="adminField" onAction="#handleSubmitButton"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <HBox spacing="25" alignment="CENTER"
+              GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2">
+
+            <Button fx:id="backButton" text="Back" onAction="#handleBackButton"/>
+
+
+            <Button text="Submit" onAction="#handleSubmitButton"/>
+
+        </HBox>
+
+    </GridPane>
+
+</VBox>
+
+
+
+

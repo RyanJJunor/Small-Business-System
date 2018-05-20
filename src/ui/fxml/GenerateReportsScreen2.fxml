@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="vbox"
+      fx:controller="logic.GenerateReportScreen2Controller">
+
+
+    <stylesheets>
+        <URL value="@../css/Report.css"/>
+    </stylesheets>
+
+    <fx:include source="MenuBar.fxml"/>
+
+    <HBox alignment="CENTER">
+        <Label fx:id="title" alignment="CENTER" id="title"/>
+    </HBox>
+
+    <GridPane alignment="CENTER" hgap="25" vgap="25" VBox.vgrow="ALWAYS">
+
+        <HBox spacing="10" alignment="CENTER_LEFT"
+              GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label text="Start Date : " textAlignment="RIGHT"/>
+        </HBox>
+        <DatePicker fx:id="datePickerStart" showWeekNumbers="false" GridPane.columnIndex="1"
+                    GridPane.rowIndex="0"/>
+
+        <HBox spacing="10" alignment="CENTER_LEFT"
+              GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <Label text="End Date : " textAlignment="RIGHT"/>
+        </HBox>
+
+        <DatePicker fx:id="datePickerEnd" id="date" showWeekNumbers="false" GridPane.columnIndex="1"
+                    GridPane.rowIndex="1"/>
+
+        <HBox spacing="25" alignment="CENTER"
+              GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2">
+
+            <Button id="buttons" text="Back" onAction="#handleBackButton"/>
+
+            <Button id="buttons" text="Submit" onAction="#handleSubmitButton"/>
+
+        </HBox>
+
+    </GridPane>
+
+</VBox>

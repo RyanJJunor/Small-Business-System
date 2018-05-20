@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="vbox"
+      fx:controller="logic.ViewUsersScreenController" alignment="TOP_CENTER">
+
+
+    <stylesheets>
+        <URL value="@../css/Report.css"/>
+    </stylesheets>
+
+    <fx:include source="MenuBar.fxml"/>
+
+    <GridPane alignment="CENTER" hgap="25" vgap="10"
+              VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+
+        <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" alignment="CENTER">
+            <Label fx:id="reportLabel"/>
+        </VBox>
+
+        <TableView fx:id="usersTable" prefWidth="1002" GridPane.vgrow="ALWAYS"
+                   GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <columns>
+                <TableColumn fx:id="employeeIdCol" text="Employee Number" prefWidth="250" resizable="false"/>
+                <TableColumn fx:id="employeeFNameCol" text="First Name" prefWidth="250" resizable="false"/>
+                <TableColumn fx:id="employeeLNameCol" text="Last Name" prefWidth="250" resizable="false"/>
+                <TableColumn fx:id="employeeIsAdminCol" text="Admin (Y/N)" prefWidth="250" resizable="false"/>
+
+            </columns>
+
+        </TableView>
+
+
+        <HBox spacing="25" alignment="CENTER"
+              GridPane.columnIndex="0" GridPane.rowIndex="3">
+
+            <Button fx:id="backButton" id="buttons" text="Back" onAction="#handleBackButton"/>
+
+        </HBox>
+
+    </GridPane>
+</VBox>

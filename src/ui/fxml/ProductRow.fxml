@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import java.net.URL?>
+<fx:root xmlns:fx="http://javafx.com/fxml" type="javafx.scene.layout.HBox" spacing="25" id="prodRow">
+
+    <stylesheets>
+        <URL value="@../css/Sale.css"/>
+    </stylesheets>
+
+    <Label fx:id="numberField" id="numberField" text="#"/>
+
+    <!-- These action handlers display as errors but they do work-->
+    <ComboBox fx:id="nameCombo" id="nameCombo" visibleRowCount="5" onAction="#handleQuantity"/>
+
+    <TextField fx:id="quantityField" id="quantityField" onKeyTyped="#handleQuantity"/>
+
+    <HBox spacing="-30">
+        <Label fx:id="priceField" id="priceField" text=""/>
+        <ImageView fx:id="image" id="boxImage" onMouseClicked="#removeItem">
+            <image>
+                <Image url="@../img/removeProductRowImage.png"/>
+            </image>
+        </ImageView>
+
+    </HBox>
+
+</fx:root>

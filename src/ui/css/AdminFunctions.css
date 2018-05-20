@@ -1,0 +1,35 @@
+.label {
+    -fx-font-size: 20px;
+}
+
+.button {
+    -fx-padding: 0px 0px 0px 0px;
+    -fx-font-size: 18px;
+    -fx-min-height: 75px;
+    -fx-min-width: 150px;
+}
+
+.text-field {
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 25px;
+}
+
+.combo-box {
+    -fx-min-width: 500px;
+    -fx-min-height: 50px;
+    -fx-font-size: 25px;
+}
+
+#bigButton {
+
+    -fx-padding: 0px 0px 0px 0px;
+    -fx-font-size: 18px;
+    -fx-min-height: 250px;
+    -fx-min-width: 250px;
+}
+
+
+
+
+

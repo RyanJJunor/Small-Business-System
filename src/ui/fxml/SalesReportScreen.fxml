@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="vbox"
+      fx:controller="logic.SalesReportScreenController" alignment="TOP_CENTER">
+
+
+    <stylesheets>
+        <URL value="@../css/Report.css"/>
+    </stylesheets>
+
+    <fx:include source="MenuBar.fxml"/>
+
+    <GridPane alignment="CENTER" hgap="25" vgap="10"
+              VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+
+        <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" alignment="CENTER">
+            <Label fx:id="reportLabel"/>
+        </VBox>
+
+        <TableView fx:id="reportTable" prefWidth="1002" GridPane.vgrow="ALWAYS"
+                   GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <columns>
+                <TableColumn fx:id="itemNumCol" text="Item Number" prefWidth="150" maxWidth="150"
+                             resizable="false"/>
+                <TableColumn fx:id="itemNameCol" text="Item Name" prefWidth="300" maxWidth="300" resizable="false"/>
+                <TableColumn fx:id="itemPriceCol" text="Price (£)" prefWidth="150" maxWidth="150"
+                             resizable="false"/>
+                <TableColumn fx:id="itemQuantityCol" text="Number Sold" prefWidth="200" maxWidth="200"
+                             resizable="false"/>
+                <TableColumn fx:id="sumPriceCol" text="Total Price (£)" prefWidth="200" maxWidth="200"
+                             resizable="false"/>
+            </columns>
+
+        </TableView>
+
+        <TableView fx:id="summaryTable" id="summary" prefWidth="1002" GridPane.vgrow="NEVER"
+                   GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <columns>
+                <TableColumn fx:id="unitsSoldTitle" prefWidth="165" maxWidth="165" resizable="false"/>
+                <TableColumn fx:id="unitsSoldCol" prefWidth="70" maxWidth="70" resizable="false"/>
+
+                <TableColumn fx:id="unitPriceTitle" prefWidth="125" maxWidth="125" resizable="false"/>
+                <TableColumn fx:id="unitPriceCol" prefWidth="140" maxWidth="140" resizable="false"/>
+                <TableColumn fx:id="vatPriceTitle" prefWidth="125" maxWidth="125" resizable="false"/>
+                <TableColumn fx:id="vatPriceCol" prefWidth="100" maxWidth="100" resizable="false"/>
+                <TableColumn fx:id="grossPriceTitle" prefWidth="135" maxWidth="135" resizable="false"/>
+                <TableColumn fx:id="grossPriceCol" prefWidth="140" maxWidth="140" resizable="false"/>
+            </columns>
+
+        </TableView>
+
+        <HBox spacing="25" alignment="CENTER"
+              GridPane.columnIndex="0" GridPane.rowIndex="3">
+
+            <Button fx:id="backButton" id="buttons" text="Back" onAction="#handleBackButton"/>
+
+            <Button id="buttons" text="Print" onAction="#handlePrintButton"/>
+
+        </HBox>
+
+    </GridPane>
+
+</VBox>

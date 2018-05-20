@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="vbox"
+      fx:controller="logic.AdjustStockScreen2Controller">
+
+
+    <stylesheets>
+        <URL value="@../css/MainStylesheet.css"/>
+    </stylesheets>
+
+    <fx:include source="MenuBar.fxml"/>
+
+
+    <HBox alignment="CENTER">
+
+        <Label text="Stock Adjust" alignment="CENTER" id="title"/>
+
+    </HBox>
+
+    <GridPane alignment="CENTER" hgap="25" vgap="25" VBox.vgrow="ALWAYS">
+
+        <VBox alignment="CENTER" spacing="25"
+              GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
+            <Label fx:id="itemNumberLabel"/>
+            <Label fx:id="stockLevelLabel" id="stockLabel"/>
+        </VBox>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT"
+              GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <Label text="New stock level : " textAlignment="RIGHT"/>
+        </HBox>
+
+
+        <TextField fx:id="stockLevelField"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+
+        <HBox spacing="25" alignment="CENTER"
+              GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2">
+            <Button fx:id="backButton" text="Back" onAction="#handleBackButton"/>
+            <Button text="Submit" onAction="#handleSubmitButton"/>
+        </HBox>
+
+    </GridPane>
+
+</VBox>

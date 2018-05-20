@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="vbox"
+      fx:controller="logic.MakeSaleScreenNewCustController">
+
+    <stylesheets>
+        <URL value="@../css/Sale.css"/>
+    </stylesheets>
+
+    <fx:include source="MenuBar.fxml"/>
+
+
+    <GridPane hgap="10" vgap="10" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="25" right="25" bottom="25" left="25"/>
+        </padding>
+
+        <Label text="Customer Details * - Mandatory"
+               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+        <GridPane alignment="CENTER_LEFT" hgap="25" vgap="5" id="grid"
+                  GridPane.columnIndex="0" GridPane.rowIndex="1">
+
+            <Label text="Account Number: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label fx:id="customerNumberLabel" GridPane.hgrow="ALWAYS"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="First Name: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="firstNameField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="*" id="optionality"
+                   GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+
+            <Label text="Last Name: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="lastNameField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label text="*" id="optionality"
+                   GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+
+            <Label text="Email Address: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="emailField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label text="*" id="optionality"
+                   GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+            <Label text="Phone Number: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="phoneField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Label text="*" id="optionality"
+                   GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+
+        </GridPane>
+
+        <Label text="Customer Address ^ - Mandatory if adding an address"
+               GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <GridPane alignment="CENTER_LEFT" hgap="25" vgap="5" id="grid"
+                  GridPane.columnIndex="1" GridPane.rowIndex="1">
+
+            <Label text="Line 1: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="line1Field" GridPane.hgrow="ALWAYS"
+                       GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="^" id="optionality"
+                   GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+
+            <Label text="Line 2: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="line2Field"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label id="optionality"
+                   GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+
+            <Label text="City: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="cityField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label text="^" id="optionality"
+                   GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+
+            <Label text="County: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="countyField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label id="optionality"
+                   GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+            <Label text="Post Code: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="postcodeField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Label text="^" id="optionality"
+                   GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+
+        </GridPane>
+
+        <GridPane alignment="CENTER" hgap="25" vgap="5"
+                  GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Label text="Number" id="numberLabel"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+            <Label text="Item" id="nameLabel" GridPane.hgrow="ALWAYS"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Quantity" id="quantityLabel"
+                   GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+
+            <HBox alignment="CENTER" spacing="-55"
+                  GridPane.columnIndex="3" GridPane.rowIndex="0">
+                <Label text="Price" id="priceLabel"/>
+                <Button id="addButton" text="Add Item" onAction="#addItem"/>
+            </HBox>
+        </GridPane>
+
+        <ScrollPane hbarPolicy="NEVER" fitToWidth="true" vbarPolicy="ALWAYS" fitToHeight="true"
+                    GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2" GridPane.vgrow="ALWAYS">
+            <GridPane fx:id="grid" alignment="TOP_CENTER" hgap="25" id="scrollGrid"/>
+
+        </ScrollPane>
+
+        <HBox alignment="CENTER_RIGHT"
+              GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Label id="bottomLabel"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_RIGHT"
+              GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Button fx:id="backButton" text="Back" onAction="#handleBackButton"/>
+            <Button text="Submit" onAction="#handleSubmitButton"/>
+        </HBox>
+
+    </GridPane>
+
+</VBox>

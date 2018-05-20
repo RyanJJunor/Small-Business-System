@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="logic.MenuBarController">
+
+    <stylesheets>
+        <URL value="@../css/MenuBar.css"/>
+    </stylesheets>
+
+    <MenuBar fx:id="menuBar">
+        <Menu fx:id="menu">
+            <MenuItem text="Profile" onAction="#handleProfileButton"/>
+            <MenuItem text="Log Out" onAction="#handleLogOutButton"/>
+        </Menu>
+    </MenuBar>
+
+</VBox>

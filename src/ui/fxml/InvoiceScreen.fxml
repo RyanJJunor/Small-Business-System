@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="vbox"
+      fx:controller="logic.InvoiceScreenController">
+
+
+    <stylesheets>
+        <URL value="@../css/Invoice.css"/>
+    </stylesheets>
+
+    <fx:include source="MenuBar.fxml"/>
+
+
+    <GridPane hgap="50" vgap="10" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="25" right="25" bottom="25" left="25"/>
+        </padding>
+
+        <Label text="Customer Details"
+               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+        <GridPane alignment="CENTER_LEFT" hgap="25" vgap="5" id="grid"
+                  GridPane.columnIndex="0" GridPane.rowIndex="1">
+
+            <Label text="Account Number: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label fx:id="customerNumberLabel"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="First Name: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Label fx:id="firstNameLabel"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Last Name: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <Label fx:id="lastNameLabel"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Email Address: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <Label fx:id="emailLabel"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <Label text="Phone Number: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <Label fx:id="phoneLabel"
+                   GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        </GridPane>
+
+        <Label text="Customer Address"
+               GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <GridPane alignment="CENTER_LEFT" hgap="25" vgap="5" id="grid"
+                  GridPane.columnIndex="1" GridPane.rowIndex="1">
+
+            <Label text="Line 1: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label fx:id="line1Label"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Line 2: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Label fx:id="line2Label"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="City: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <Label fx:id="cityLabel"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="County: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <Label fx:id="countyLabel"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <Label text="Post Code: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <Label fx:id="postcodeLabel"
+                   GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        </GridPane>
+
+        <GridPane alignment="CENTER" hgap="25" vgap="5"
+                  GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Label text="Number" id="numberLabel"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+            <Label text="Item" id="nameLabel" GridPane.hgrow="ALWAYS"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Quantity" id="quantityLabel"
+                   GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+
+            <Label text="Unit Price" id="priceLabel" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+            <Label text="VAT" id="priceLabel" GridPane.columnIndex="4" GridPane.rowIndex="0"/>
+
+            <Label text="Gross Price" id="priceLabel" GridPane.columnIndex="5" GridPane.rowIndex="0"/>
+
+        </GridPane>
+
+        <ScrollPane hbarPolicy="NEVER" fitToWidth="true" vbarPolicy="ALWAYS" fitToHeight="true"
+                    GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2" GridPane.vgrow="ALWAYS">
+            <GridPane fx:id="grid" alignment="TOP_CENTER" hgap="25" id="scrollGrid">
+
+            </GridPane>
+        </ScrollPane>
+
+        <VBox alignment="CENTER_LEFT"
+              GridPane.columnIndex="0" GridPane.rowIndex="4">
+            <Label fx:id="orderLabel" id="bottomLabel"/>
+            <Label fx:id="employeeLabel" text="Order Processed By: " id="bottomLabel"/>
+        </VBox>
+
+        <HBox alignment="CENTER_RIGHT"
+              GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Label fx:id="bottomPriceLabel" id="bottomLabel"/>
+        </HBox>
+
+
+        <HBox spacing="20" alignment="CENTER_RIGHT"
+              GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Button fx:id="backButton" text="Back" onAction="#handleBackButton"/>
+            <Button text="Print" onAction="#handlePrintButton"/>
+        </HBox>
+
+    </GridPane>
+
+</VBox>

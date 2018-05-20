@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import java.net.URL?>
+<fx:root xmlns:fx="http://javafx.com/fxml" type="javafx.scene.layout.HBox" spacing="25" id="prodRow">
+
+    <stylesheets>
+        <URL value="@../css/Invoice.css"/>
+    </stylesheets>
+
+    <Label fx:id="numberLabel" id="numberField" text="#"/>
+
+    <Label fx:id="nameLabel" id="nameCombo" HBox.hgrow="ALWAYS"/>
+
+    <Label fx:id="quantityLabel" id="quantityField"/>
+
+    <Label fx:id="noVatLabel" styleClass="unitField"/>
+
+    <Label fx:id="vatLabel" styleClass="vatLabel"/>
+
+    <Label fx:id="totalLabel" styleClass="gross"/>
+
+</fx:root>

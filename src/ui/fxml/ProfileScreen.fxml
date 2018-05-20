@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="vbox"
+      fx:controller="logic.ProfileScreenController" alignment="TOP_CENTER">
+
+
+    <stylesheets>
+        <URL value="@../css/ProfileScreen.css"/>
+    </stylesheets>
+
+    <fx:include source="MenuBar.fxml"/>
+
+    <GridPane hgap="25" vgap="25">
+        <padding>
+            <Insets top="60" right="25" bottom="200" left="25"/>
+        </padding>
+
+        <Label fx:id="welcomeLabel"
+               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+        <Label fx:id="employeeLabel"
+               GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+        <Label fx:id="adminLabel"
+               GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    </GridPane>
+
+    <VBox spacing="50" alignment="CENTER">
+        <Button text="Change Password" onAction="#handleChangePasswordButton" alignment="CENTER"/>
+        <Button text="Home" onAction="#handleBackButton" alignment="CENTER"/>
+    </VBox>
+
+</VBox>
